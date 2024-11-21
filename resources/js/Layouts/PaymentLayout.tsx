@@ -17,7 +17,7 @@ export default function Guest({ children }: PropsWithChildren) {
     return (
         <div
             className={`flex min-h-screen flex-col items-center pt-6 sm:justify-center sm:pt-0 bg-[#1F1F1F] transition-all duration-500 ease-in-out ${
-                isLoaded ? 'bg-[url("/build/iii/hero1.svg")] bg-cover bg-center' : 'bg-transparent blur-sm'
+                isLoaded ? 'bg-[url("/build/ii/hero1.svg")] bg-cover bg-center' : 'bg-transparent blur-sm'
             }`}
         >
             <div>

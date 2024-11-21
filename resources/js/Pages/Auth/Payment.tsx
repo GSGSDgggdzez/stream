@@ -1,3 +1,4 @@
+import { router } from '@inertiajs/react';
 import React, { useState } from 'react';
 import PaymentLayout from '@/Layouts/PaymentLayout';
 import { Head } from '@inertiajs/react';
@@ -37,6 +38,12 @@ export default function Payment() {
   const handlePlanSelect = (planName: string) => {
     setSelectedPlan(planName.toLowerCase());
   };
+  const handleSubscribe = () => {
+    router.get(`/subscribe/${selectedPlan}`);
+};
+
+
+
 
   return (
     <PaymentLayout>
@@ -80,6 +87,7 @@ export default function Payment() {
             <div className="text-center">
               <button
                 className="bg-[#E50000] text-white px-12 py-4 rounded-md text-lg font-semibold hover:bg-[#E50000]/90 transition-colors"
+                onClick={handleSubscribe}
               >
                 Subscribe Now
               </button>
